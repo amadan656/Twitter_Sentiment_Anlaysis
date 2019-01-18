@@ -73,8 +73,7 @@ merge<-cbind(tweets_df,tweets)
 
 #Select Columns
 
-Final_Table <- select(merge,"tweet_text","tweet_sentiment.word_count","tweet_sentiment.sentiment","favoriteCount","isRetweet","retweetCount")
-
+Final_Table <- select(merge,"created","tweet_text","tweet_sentiment.word_count","tweet_sentiment.sentiment","favoriteCount","isRetweet","retweetCount")
 
 # Export as CSV
 write.csv(Final_Table, file = 'Twitter_Scrape.csv')
