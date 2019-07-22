@@ -35,21 +35,21 @@ tweet_text<- tweets$text
 
 ########clean text###############
 #convert to lower case
-tweet_text<- tolower(syfy_text)
+tweet_text<- tolower(tweet_text)
 # replace blank space & "rt"
-tweet_text <- gsub("rt", "", syfy_text)
+tweet_text <- gsub("rt", "", tweet_text)
 # Replace @UserName
-tweet_text <- gsub("@\\w+", "", syfy_text)
+tweet_text <- gsub("@\\w+", "", tweet_text)
 # Remove punctuation
-tweet_text <- gsub("[[:punct:]]", "", syfy_text)
+tweet_text <- gsub("[[:punct:]]", "", tweet_text)
 # Remove links
-tweet_text <- gsub("http\\w+", "", syfy_text)
+tweet_text <- gsub("http\\w+", "", tweet_text)
 # Remove tabs
-tweet_text <- gsub("[ |\t]{2,}", "", syfy_text)
+tweet_text <- gsub("[ |\t]{2,}", "", tweet_text)
 # Remove blank spaces at the beginning
-tweet_text <- gsub("^ ", "", syfy_text)
+tweet_text <- gsub("^ ", "", tweet_text)
 # Remove blank spaces at the end
-tweet_text <- gsub(" $", "", syfy_text)
+tweet_text <- gsub(" $", "", tweet_text)
 
 
 ###Sentiment Analysis###
